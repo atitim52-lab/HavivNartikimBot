@@ -5,8 +5,8 @@
 const TelegramBot = require("node-telegram-bot-api");
 const fs = require("fs");
 
-const TOKEN = "8927766030:AAEhjDCM1KvWE_OgaLwJlkhXmmOKnx6CSkk";    
-const ADMIN_CHAT_ID = "-5498872165";     
+const TOKEN = "8927766030:AAEhjDCM1KvWE_OgaLwJlkhXmmOKnx6CSkk";       // החלף בטוקן מ-BotFather
+const ADMIN_CHAT_ID = "-5498872165"; // החלף ב-Chat ID של הקבוצה
 const FILE  = "inventory.json";
 const LEAD  = 90;
 
@@ -295,6 +295,69 @@ function showEdit(chatId, m) {
   );
 }
 
+// /quick - דיווח מהיר על דגמים ספציפיים
+// שימוש: /quick 8121 שחור 15
+bot.onText(/\/quick (.+) (\d+)$/, (msg, match) => {
+  const chatId = msg.chat.id;
+  const q = match[1].trim().toLowerCase();
+  const sent = parseInt(match[2]);
+  if (isNaN(sent) || sent < 0) return bot.sendMessage(chatId, "מספר לא תקין");
+
+  const ms = inv.models.filter(m =>
+    m.name.toLowerCase().includes(q) || (m.sku && m.sku.toLowerCase().includes(q))
+  );
+
+  if (!ms.length) return bot.sendMessage(chatId, "לא נמצא דגם - נסה /find " + match[1]);
+
+  if (ms.length > 1) {
+    let text = "נמצאו " + ms.length + " דגמים, היה ספציפי יותר:\n";
+    ms.slice(0, 10).forEach((m, i) => { text += (i+1) + ". " + m.name + " (מלאי: " + m.stock + ")\n"; });
+    return bot.sendMessage(chatId, text);
+  }
+
+  const m = ms[0];
+  const old = m.stock;
+  m.stock = Math.max(0, m.stock - sent);
+  m.dailyAvg = Math.max(1, Math.round(((m.dailyAvg || 0) * 6 + sent) / 7));
+  m.lastUpdate = new Date().toISOString();
+
+  // שמור בהיסטוריה
+  const today = todayStr();
+  inv.history = inv.history || [];
+  const dayEntry = inv.history.find(d => d.date === today);
+  if (dayEntry) {
+    const existing = dayEntry.entries.find(e => e.modelId === m.id);
+    if (existing) existing.sent += sent;
+    else dayEntry.entries.push({ modelId: m.id, name: m.name, sent: sent });
+    dayEntry.time = new Date().toISOString();
+  } else {
+    inv.history.push({ date: today, time: new Date().toISOString(), entries: [{ modelId: m.id, name: m.name, sent: sent }] });
+  }
+  if (inv.history.length > 365) inv.history.shift();
+  persist(inv);
+
+  const d = daysLeft(m);
+  const ic = isAlert(m) ? "🔴" : isWarn(m) ? "🟡" : "🟢";
+  let text = "✅ " + m.name + "\nנשלחו: " + sent + " | מלאי: " + old + " -> " + m.stock + "\n" + ic + " ~" + d + " ימים נותרו";
+  if (isAlert(m)) text += "\n⚠️ הזמן עכשיו!";
+  bot.sendMessage(chatId, text);
+});
+
+// /quickhelp - הסבר על quick
+bot.onText(/\/quickhelp/, msg => {
+  bot.sendMessage(msg.chat.id,
+    "📝 *דיווח מהיר - /quick*\n\n" +
+    "שלח: /quick [שם דגם] [כמות]\n\n" +
+    "דוגמאות:\n" +
+    "/quick 8121 שחור 15\n" +
+    "/quick 8065 שחור 20\n" +
+    "/quick 2044 זהב 8\n" +
+    "/quick 7582 כחול 30\n\n" +
+    "הבוט יעדכן מלאי ויישמר בהיסטוריה!\n" +
+    "לרשימת דגמים: /find [שם]"
+  );
+});
+
 setInterval(function() {
   const sc  = inv.schedule || {hour:18,minute:0};
   const now = new Date();
@@ -317,6 +380,9 @@ setInterval(function() {
       bot.sendMessage(ADMIN_CHAT_ID, "דוח שבועי\nסהכ: " + total + " יח\n" + top5.map(([n,q],i)=>(i+1)+". "+n+": "+q).join("\n"));
     }, 4000);
   }
+}, 60000);
+
+console.log("HavivNartikimBot פעיל!");
 }, 60000);
 
 console.log("HavivNartikimBot פעיל!");
