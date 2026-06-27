@@ -1,0 +1,2349 @@
+{
+  "models": [
+    {
+      "id": 1,
+      "name": "3014 אפור",
+      "sku": "3014",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 2,
+      "name": "3014 בורדו",
+      "sku": "3014",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 3,
+      "name": "3014 כחול",
+      "sku": "3014",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 4,
+      "name": "3014 שחור",
+      "sku": "3014",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 5,
+      "name": "3018 בורדו",
+      "sku": "3018",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 6,
+      "name": "3018 שחור",
+      "sku": "3018",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 7,
+      "name": "3018C שחור",
+      "sku": "3018C",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 8,
+      "name": "3018C כחול",
+      "sku": "3018C",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 9,
+      "name": "3018C בורדו",
+      "sku": "3018C",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 10,
+      "name": "3028 בורדו",
+      "sku": "3028",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 11,
+      "name": "3028 שחור",
+      "sku": "3028",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 12,
+      "name": "3028C שחור",
+      "sku": "3028C",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 13,
+      "name": "3300 שחור",
+      "sku": "3300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 14,
+      "name": "3300 אפור",
+      "sku": "3300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 15,
+      "name": "3300 נייבי",
+      "sku": "3300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 16,
+      "name": "3300 בורדו",
+      "sku": "3300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 17,
+      "name": "3300 חום",
+      "sku": "3300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 18,
+      "name": "3300C שחור",
+      "sku": "3300C",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 19,
+      "name": "3300C אפור",
+      "sku": "3300C",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 20,
+      "name": "3300C נייבי",
+      "sku": "3300C",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 21,
+      "name": "3500 שחור",
+      "sku": "3500",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 22,
+      "name": "3500 אפור",
+      "sku": "3500",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 23,
+      "name": "3500 נייבי",
+      "sku": "3500",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 24,
+      "name": "3500 בורדו",
+      "sku": "3500",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 25,
+      "name": "5089 אדום",
+      "sku": "5089",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 26,
+      "name": "5089 בורדו",
+      "sku": "5089",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 27,
+      "name": "5089 חום",
+      "sku": "5089",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 28,
+      "name": "5089 ירוק",
+      "sku": "5089",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 29,
+      "name": "5089 כחול",
+      "sku": "5089",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 30,
+      "name": "5089 שחור",
+      "sku": "5089",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 31,
+      "name": "5110 שחור",
+      "sku": "5110",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 32,
+      "name": "5110 כחול",
+      "sku": "5110",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 33,
+      "name": "5110 בורדו",
+      "sku": "5110",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 34,
+      "name": "5300 שחור",
+      "sku": "5300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 35,
+      "name": "5300 אפור",
+      "sku": "5300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 36,
+      "name": "5300 נייבי",
+      "sku": "5300",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 37,
+      "name": "8027 שחור",
+      "sku": "8027",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 38,
+      "name": "8611 שחור",
+      "sku": "8611",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 39,
+      "name": "8611 זהב",
+      "sku": "8611",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 40,
+      "name": "8611 בורדו",
+      "sku": "8611",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 41,
+      "name": "8811 Beige croco",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 42,
+      "name": "8811 Black croco",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 600,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 43,
+      "name": "8811 Brown croco",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 600,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 44,
+      "name": "8811 Purple croco",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 45,
+      "name": "8811 Red croco",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 46,
+      "name": "8811 בורדו",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 47,
+      "name": "8811 חום",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 48,
+      "name": "8811 ירוק",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 49,
+      "name": "8811 כחול",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 50,
+      "name": "8811 שחור",
+      "sku": "8811",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 51,
+      "name": "8811F שחור",
+      "sku": "8811F",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 52,
+      "name": "8811F נייבי",
+      "sku": "8811F",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 53,
+      "name": "8811F בורדו",
+      "sku": "8811F",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 54,
+      "name": "8811Z שחור",
+      "sku": "8811Z",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 55,
+      "name": "8811Z נייבי",
+      "sku": "8811Z",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 56,
+      "name": "8911 אדום",
+      "sku": "8911",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 57,
+      "name": "8911 אפור",
+      "sku": "8911",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 58,
+      "name": "8911 שחור",
+      "sku": "8911",
+      "category": "נרתיקים רכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 59,
+      "name": "1808 בורדו",
+      "sku": "1808",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 60,
+      "name": "1808 חום",
+      "sku": "1808",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 61,
+      "name": "1808 ירוק",
+      "sku": "1808",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 62,
+      "name": "1808 כחול",
+      "sku": "1808",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 63,
+      "name": "1808 שחור",
+      "sku": "1808",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 64,
+      "name": "2022 שחור",
+      "sku": "2022",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 65,
+      "name": "2022 כסף",
+      "sku": "2022",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 66,
+      "name": "2022 זהב",
+      "sku": "2022",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 67,
+      "name": "2022 אדום",
+      "sku": "2022",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 68,
+      "name": "2022 כחול",
+      "sku": "2022",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 69,
+      "name": "2040 שחור",
+      "sku": "2040",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 70,
+      "name": "2040 כסף",
+      "sku": "2040",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 71,
+      "name": "2040 זהב",
+      "sku": "2040",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 72,
+      "name": "2044 שחור",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 300,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 73,
+      "name": "2044 כסף",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 74,
+      "name": "2044 זהב",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 75,
+      "name": "2044 אדום",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 1500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 76,
+      "name": "2044 כחול",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 1300,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 77,
+      "name": "2044 בורדו",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 78,
+      "name": "2044 חדש שחור",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 79,
+      "name": "2044 חדש כסף",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 80,
+      "name": "2044 חדש זהב",
+      "sku": "2044",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 81,
+      "name": "2052 שחור",
+      "sku": "2052",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 82,
+      "name": "2052 זהב",
+      "sku": "2052",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 83,
+      "name": "2072 שחור",
+      "sku": "2072",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 84,
+      "name": "2072 כסף",
+      "sku": "2072",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 85,
+      "name": "2072 אדום",
+      "sku": "2072",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 86,
+      "name": "2072 כחול",
+      "sku": "2072",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 87,
+      "name": "2094 שחור",
+      "sku": "2094",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 88,
+      "name": "2094 כסף",
+      "sku": "2094",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 89,
+      "name": "2094 זהב",
+      "sku": "2094",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 90,
+      "name": "2094 רוז גולד",
+      "sku": "2094",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 91,
+      "name": "2130 שחור",
+      "sku": "2130",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 92,
+      "name": "2130 כסף",
+      "sku": "2130",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 93,
+      "name": "2213 שחור",
+      "sku": "2213",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 94,
+      "name": "2213 כסף",
+      "sku": "2213",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 95,
+      "name": "2213 זהב",
+      "sku": "2213",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 96,
+      "name": "2228 שחור",
+      "sku": "2228",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 97,
+      "name": "2228 כסף",
+      "sku": "2228",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 98,
+      "name": "2228 זהב",
+      "sku": "2228",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 99,
+      "name": "2228 אדום",
+      "sku": "2228",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 100,
+      "name": "5707 שחור",
+      "sku": "5707",
+      "category": "קופסאות מתכת",
+      "stock": 1000,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 101,
+      "name": "5707 כסף",
+      "sku": "5707",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 102,
+      "name": "5707 זהב",
+      "sku": "5707",
+      "category": "קופסאות מתכת",
+      "stock": 1500,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 103,
+      "name": "5707 כחול",
+      "sku": "5707",
+      "category": "קופסאות מתכת",
+      "stock": 300,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 104,
+      "name": "5707 אדום",
+      "sku": "5707",
+      "category": "קופסאות מתכת",
+      "stock": 200,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 105,
+      "name": "5707F שחור",
+      "sku": "5707F",
+      "category": "קופסאות מתכת",
+      "stock": 1400,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 106,
+      "name": "5707F כסף",
+      "sku": "5707F",
+      "category": "קופסאות מתכת",
+      "stock": 300,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 107,
+      "name": "5707F זהב",
+      "sku": "5707F",
+      "category": "קופסאות מתכת",
+      "stock": 1000,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 108,
+      "name": "5707G שחור",
+      "sku": "5707G",
+      "category": "קופסאות מתכת",
+      "stock": 700,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 109,
+      "name": "5707G כסף",
+      "sku": "5707G",
+      "category": "קופסאות מתכת",
+      "stock": 1500,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 110,
+      "name": "5707G זהב",
+      "sku": "5707G",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 111,
+      "name": "7505 שחור",
+      "sku": "7505",
+      "category": "קופסאות מתכת",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 112,
+      "name": "7505 כסף",
+      "sku": "7505",
+      "category": "קופסאות מתכת",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 113,
+      "name": "7531 שחור",
+      "sku": "7531",
+      "category": "קופסאות מתכת",
+      "stock": 900,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 114,
+      "name": "7531 כסף",
+      "sku": "7531",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 115,
+      "name": "7531 זהב",
+      "sku": "7531",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 116,
+      "name": "7581 Wooden Red",
+      "sku": "7581",
+      "category": "קופסאות מתכת",
+      "stock": 1500,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 117,
+      "name": "7581 אפור",
+      "sku": "7581",
+      "category": "קופסאות מתכת",
+      "stock": 1500,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 118,
+      "name": "7581 ורוד",
+      "sku": "7581",
+      "category": "קופסאות מתכת",
+      "stock": 800,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 119,
+      "name": "7581 שחור",
+      "sku": "7581",
+      "category": "קופסאות מתכת",
+      "stock": 700,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 120,
+      "name": "7582 אדום",
+      "sku": "7582",
+      "category": "קופסאות מתכת",
+      "stock": 1300,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 121,
+      "name": "7582 אפור",
+      "sku": "7582",
+      "category": "קופסאות מתכת",
+      "stock": 1400,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 122,
+      "name": "7582 אפור בהיר",
+      "sku": "7582",
+      "category": "קופסאות מתכת",
+      "stock": 700,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 123,
+      "name": "7582 כחול",
+      "sku": "7582",
+      "category": "קופסאות מתכת",
+      "stock": 1500,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 124,
+      "name": "7582 סגול",
+      "sku": "7582",
+      "category": "קופסאות מתכת",
+      "stock": 900,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 125,
+      "name": "7582 שחור",
+      "sku": "7582",
+      "category": "קופסאות מתכת",
+      "stock": 1400,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 126,
+      "name": "8003 אדום",
+      "sku": "8003",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 127,
+      "name": "8003 שחור",
+      "sku": "8003",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 128,
+      "name": "8003C אדום",
+      "sku": "8003C",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 129,
+      "name": "8003C שחור",
+      "sku": "8003C",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 130,
+      "name": "8011 קרם",
+      "sku": "8011",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 131,
+      "name": "8011 בורדו",
+      "sku": "8011",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 132,
+      "name": "8011 כחול",
+      "sku": "8011",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 133,
+      "name": "8011 שחור",
+      "sku": "8011",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 134,
+      "name": "8044 אדום מבריק",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 600,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 135,
+      "name": "8044 ורוד מבריק",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 136,
+      "name": "8044 כחול מבריק",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 600,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 137,
+      "name": "8044 כחול מט",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 1400,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 138,
+      "name": "8044 כחול מט קרבון",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 800,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 139,
+      "name": "8044 כתום מבריק",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 140,
+      "name": "8044 שחור מבריק",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 1100,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 141,
+      "name": "8044 שחור מט",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 142,
+      "name": "8044 שחור מט קרבון",
+      "sku": "8044",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 143,
+      "name": "8053D שחור",
+      "sku": "8053D",
+      "category": "קופסאות מתכת",
+      "stock": 700,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 144,
+      "name": "8053D חום",
+      "sku": "8053D",
+      "category": "קופסאות מתכת",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 145,
+      "name": "8053D בורדו",
+      "sku": "8053D",
+      "category": "קופסאות מתכת",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 146,
+      "name": "8119 תכלת",
+      "sku": "8119",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 147,
+      "name": "8119 ירוק בהיר",
+      "sku": "8119",
+      "category": "קופסאות מתכת",
+      "stock": 1700,
+      "minStock": 500,
+      "dailyAvg": 4,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 148,
+      "name": "8119 כתום",
+      "sku": "8119",
+      "category": "קופסאות מתכת",
+      "stock": 1700,
+      "minStock": 500,
+      "dailyAvg": 4,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 149,
+      "name": "8119 שחור",
+      "sku": "8119",
+      "category": "קופסאות מתכת",
+      "stock": 2300,
+      "minStock": 500,
+      "dailyAvg": 5,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 150,
+      "name": "8121 אפור",
+      "sku": "8121",
+      "category": "קופסאות מתכת",
+      "stock": 300,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 151,
+      "name": "8121 כחול",
+      "sku": "8121",
+      "category": "קופסאות מתכת",
+      "stock": 300,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 152,
+      "name": "8121 כתום",
+      "sku": "8121",
+      "category": "קופסאות מתכת",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 153,
+      "name": "8121 שחור",
+      "sku": "8121",
+      "category": "קופסאות מתכת",
+      "stock": 700,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 154,
+      "name": "8193 אפור-תכלת",
+      "sku": "8193",
+      "category": "קופסאות מתכת",
+      "stock": 1300,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 155,
+      "name": "8193 ירוק",
+      "sku": "8193",
+      "category": "קופסאות מתכת",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 156,
+      "name": "8193 סגול",
+      "sku": "8193",
+      "category": "קופסאות מתכת",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 157,
+      "name": "8193 שחור",
+      "sku": "8193",
+      "category": "קופסאות מתכת",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 158,
+      "name": "1032 שחור",
+      "sku": "1032",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 159,
+      "name": "1032 אפור",
+      "sku": "1032",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 160,
+      "name": "1032 כחול",
+      "sku": "1032",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 161,
+      "name": "1032 בורדו",
+      "sku": "1032",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 162,
+      "name": "1032P שחור",
+      "sku": "1032P",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 163,
+      "name": "1032P אפור",
+      "sku": "1032P",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 164,
+      "name": "1032P כחול",
+      "sku": "1032P",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 165,
+      "name": "2785 שחור",
+      "sku": "2785",
+      "category": "קופסאות פלסטיק",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 166,
+      "name": "2785 אפור",
+      "sku": "2785",
+      "category": "קופסאות פלסטיק",
+      "stock": 2400,
+      "minStock": 500,
+      "dailyAvg": 4,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 167,
+      "name": "2785 כחול",
+      "sku": "2785",
+      "category": "קופסאות פלסטיק",
+      "stock": 1500,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 168,
+      "name": "2785 בורדו",
+      "sku": "2785",
+      "category": "קופסאות פלסטיק",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 169,
+      "name": "4252 אדום",
+      "sku": "4252",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 170,
+      "name": "4252 כתום",
+      "sku": "4252",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 171,
+      "name": "4252 שחור",
+      "sku": "4252",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 172,
+      "name": "4252 תכלת",
+      "sku": "4252",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 173,
+      "name": "6287 שחור",
+      "sku": "6287",
+      "category": "קופסאות פלסטיק",
+      "stock": 900,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 174,
+      "name": "6287 אפור",
+      "sku": "6287",
+      "category": "קופסאות פלסטיק",
+      "stock": 700,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 175,
+      "name": "8065 בורדו",
+      "sku": "8065",
+      "category": "קופסאות פלסטיק",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 176,
+      "name": "8065 ירוק",
+      "sku": "8065",
+      "category": "קופסאות פלסטיק",
+      "stock": 800,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 177,
+      "name": "8065 כחול",
+      "sku": "8065",
+      "category": "קופסאות פלסטיק",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 178,
+      "name": "8065 שחור",
+      "sku": "8065",
+      "category": "קופסאות פלסטיק",
+      "stock": 1000,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 179,
+      "name": "8066 שחור",
+      "sku": "8066",
+      "category": "קופסאות פלסטיק",
+      "stock": 1000,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 180,
+      "name": "8066 אפור",
+      "sku": "8066",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 181,
+      "name": "8066 נייבי",
+      "sku": "8066",
+      "category": "קופסאות פלסטיק",
+      "stock": 1400,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 182,
+      "name": "8096 שחור",
+      "sku": "8096",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 183,
+      "name": "8096 אפור",
+      "sku": "8096",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 184,
+      "name": "8096 כחול",
+      "sku": "8096",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 185,
+      "name": "8360 שחור",
+      "sku": "8360",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 186,
+      "name": "8360 אפור",
+      "sku": "8360",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 187,
+      "name": "8360 נייבי",
+      "sku": "8360",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 188,
+      "name": "8360 בורדו",
+      "sku": "8360",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 189,
+      "name": "8903 שחור",
+      "sku": "8903",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 190,
+      "name": "8903 אפור",
+      "sku": "8903",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 191,
+      "name": "8903 נייבי",
+      "sku": "8903",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 192,
+      "name": "8903 בורדו",
+      "sku": "8903",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 193,
+      "name": "8903 כחול",
+      "sku": "8903",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 194,
+      "name": "8930 בורדו",
+      "sku": "8930",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 195,
+      "name": "8930 כחול",
+      "sku": "8930",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 196,
+      "name": "8930 שחור",
+      "sku": "8930",
+      "category": "קופסאות פלסטיק",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 197,
+      "name": "1017 שחור",
+      "sku": "1017",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 198,
+      "name": "1017 כחול",
+      "sku": "1017",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 199,
+      "name": "1017 בורדו",
+      "sku": "1017",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 200,
+      "name": "4007 שחור",
+      "sku": "4007",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 201,
+      "name": "4007 אפור",
+      "sku": "4007",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 202,
+      "name": "4007 כחול",
+      "sku": "4007",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 203,
+      "name": "6900 שחור",
+      "sku": "6900",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 204,
+      "name": "6900 אפור",
+      "sku": "6900",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 205,
+      "name": "6900 נייבי",
+      "sku": "6900",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 206,
+      "name": "9898 שחור",
+      "sku": "9898",
+      "category": "קופסאות מיוחדות",
+      "stock": 500,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 207,
+      "name": "9898 אפור",
+      "sku": "9898",
+      "category": "קופסאות מיוחדות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 208,
+      "name": "9000 מטלית",
+      "sku": "9000",
+      "category": "מטליות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 209,
+      "name": "9100 מטלית",
+      "sku": "9100",
+      "category": "מטליות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 210,
+      "name": "9300 מטלית",
+      "sku": "9300",
+      "category": "מטליות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 211,
+      "name": "9400 מטלית",
+      "sku": "9400",
+      "category": "מטליות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 212,
+      "name": "9600 מטלית",
+      "sku": "9600",
+      "category": "מטליות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 213,
+      "name": "9800 מטלית",
+      "sku": "9800",
+      "category": "מטליות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 214,
+      "name": "9900 מטלית",
+      "sku": "9900",
+      "category": "מטליות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 215,
+      "name": "7000 שחור",
+      "sku": "7000",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 216,
+      "name": "7000 נייבי",
+      "sku": "7000",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 217,
+      "name": "7000 אפור",
+      "sku": "7000",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 218,
+      "name": "7000 בז",
+      "sku": "7000",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 219,
+      "name": "7001 שחור",
+      "sku": "7001",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 220,
+      "name": "7001 נייבי",
+      "sku": "7001",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 221,
+      "name": "7001 אפור",
+      "sku": "7001",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 222,
+      "name": "7001 בז",
+      "sku": "7001",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 223,
+      "name": "7001 אדום",
+      "sku": "7001",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 224,
+      "name": "Paper Bags לבן",
+      "sku": "PB",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 225,
+      "name": "Paper Bags שחור",
+      "sku": "PB",
+      "category": "שקיות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 226,
+      "name": "8000 שחור",
+      "sku": "8000",
+      "category": "שרוכים",
+      "stock": 700,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 227,
+      "name": "8000 חום",
+      "sku": "8000",
+      "category": "שרוכים",
+      "stock": 1200,
+      "minStock": 500,
+      "dailyAvg": 3,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 228,
+      "name": "8000 שקוף",
+      "sku": "8000",
+      "category": "שרוכים",
+      "stock": 800,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 229,
+      "name": "8000 צבעוני",
+      "sku": "8000",
+      "category": "שרוכים",
+      "stock": 800,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "id": 230,
+      "name": "8614 זהב",
+      "sku": "8614",
+      "category": "שרוכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 231,
+      "name": "8614 כסף",
+      "sku": "8614",
+      "category": "שרוכים",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 2,
+      "lastUpdate": null
+    },
+    {
+      "id": 232,
+      "name": "5000 ספריי ניקוי",
+      "sku": "5000",
+      "category": "שונות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 1,
+      "lastUpdate": null
+    },
+    {
+      "id": 233,
+      "name": "6000 תופסן שחור",
+      "sku": "6000",
+      "category": "שונות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 1,
+      "lastUpdate": null
+    },
+    {
+      "id": 234,
+      "name": "6000 תופסן אפור",
+      "sku": "6000",
+      "category": "שונות",
+      "stock": 0,
+      "minStock": 500,
+      "dailyAvg": 1,
+      "lastUpdate": null
+    }
+  ],
+  "history": [],
+  "schedule": {
+    "hour": 18,
+    "minute": 0
+  }
+}
