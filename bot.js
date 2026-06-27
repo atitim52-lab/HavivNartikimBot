@@ -5,8 +5,8 @@
 const TelegramBot = require("node-telegram-bot-api");
 const fs = require("fs");
 
-const TOKEN = "8927766030:AAEhjDCM1KvWE_OgaLwJlkhXmmOKnx6CSkk";       // החלף בטוקן מ-BotFather
-const ADMIN_CHAT_ID = "-5498872165"; // החלף ב-Chat ID של הקבוצה
+const TOKEN = "8927766030:AAEhjDCM1KvWE_OgaLwJlkhXmmOKnx6CSkk";
+const ADMIN_CHAT_ID = "-5498872165";
 const FILE  = "inventory.json";
 const LEAD  = 90;
 
