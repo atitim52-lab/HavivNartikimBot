@@ -5,8 +5,8 @@
 const TelegramBot = require("node-telegram-bot-api");
 const fs = require("fs");
 
-const TOKEN = "8927766030:AAEhjDCM1KvWE_OgaLwJlkhXmmOKnx6CSkk";
-const ADMIN_CHAT_ID = "-5498872165";
+const TOKEN = "8927766030:AAEhjDCM1KvWE_OgaLwJlkhXmmOKnx6CSkk";       // החלף בטוקן מ-BotFather
+const ADMIN_CHAT_ID = "-5498872165"; // החלף ב-Chat ID של הקבוצה
 const FILE  = "inventory.json";
 const LEAD  = 90;
 
@@ -381,5 +381,184 @@ setInterval(function() {
     }, 4000);
   }
 }, 60000);
+
+
+// /quick - החסר כמות מדגם ספציפי (ספירה מהירה)
+// שימוש: /quick 8121 שחור 15
+bot.onText(/\/quick (.+) (\d+)$/, function(msg, match) {
+  var chatId = msg.chat.id;
+  var q = match[1].trim().toLowerCase();
+  var sent = parseInt(match[2]);
+  if (isNaN(sent) || sent < 0) return bot.sendMessage(chatId, "מספר לא תקין");
+
+  var ms = inv.models.filter(function(m) {
+    return m.name.toLowerCase().includes(q) || (m.sku && m.sku.toLowerCase().includes(q));
+  });
+
+  if (!ms.length) return bot.sendMessage(chatId, "לא נמצא - נסה /find " + match[1]);
+
+  if (ms.length > 1) {
+    var text = "נמצאו " + ms.length + " דגמים, היה ספציפי:\n";
+    ms.slice(0, 8).forEach(function(m, i) { text += (i+1) + ". " + m.name + " (" + m.stock + ")\n"; });
+    return bot.sendMessage(chatId, text);
+  }
+
+  var m = ms[0];
+  var old = m.stock;
+  m.stock = Math.max(0, m.stock - sent);
+  m.dailyAvg = Math.max(1, Math.round(((m.dailyAvg || 0) * 6 + sent) / 7));
+  m.lastUpdate = new Date().toISOString();
+
+  var today = todayStr();
+  inv.history = inv.history || [];
+  var dayEntry = inv.history.find(function(d) { return d.date === today; });
+  if (dayEntry) {
+    var existing = dayEntry.entries.find(function(e) { return e.modelId === m.id; });
+    if (existing) existing.sent += sent;
+    else dayEntry.entries.push({ modelId: m.id, name: m.name, sent: sent });
+    dayEntry.time = new Date().toISOString();
+  } else {
+    inv.history.push({ date: today, time: new Date().toISOString(), entries: [{ modelId: m.id, name: m.name, sent: sent }] });
+  }
+  if (inv.history.length > 365) inv.history.shift();
+  persist(inv);
+
+  var d = dL(m);
+  var ic = isAlert(m) ? "🔴" : isWarn(m) ? "🟡" : "🟢";
+  var reply = "✅ " + m.name + "\nנשלחו: " + sent + " | " + old + " -> " + m.stock + " | " + ic + " ~" + d + " ימים";
+  if (isAlert(m)) reply += "\n⚠️ הזמן עכשיו!";
+  bot.sendMessage(chatId, reply);
+});
+
+
+// ═══════════ HTTP API לאפליקציה ═══════════
+var http = require("http");
+var APP_PASSWORD = "havivvip";
+
+var server = http.createServer(function(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Content-Type", "application/json; charset=utf-8");
+
+  if (req.method === "OPTIONS") { res.writeHead(200); res.end(); return; }
+
+  // GET /inventory - קבל את כל המלאי (לסוכנים - קריאה בלבד)
+  if (req.method === "GET" && req.url === "/inventory") {
+    res.writeHead(200);
+    res.end(JSON.stringify({ models: inv.models, updated: new Date().toISOString() }));
+    return;
+  }
+
+  // GET /health
+  if (req.method === "GET" && req.url === "/health") {
+    res.writeHead(200);
+    res.end(JSON.stringify({ status: "ok", models: inv.models.length }));
+    return;
+  }
+
+  // POST /update - עדכון דגם (רק עם סיסמה)
+  if (req.method === "POST" && req.url === "/update") {
+    var body = "";
+    req.on("data", function(chunk) { body += chunk; });
+    req.on("end", function() {
+      try {
+        var data = JSON.parse(body);
+        if (data.password !== APP_PASSWORD) {
+          res.writeHead(403);
+          res.end(JSON.stringify({ error: "סיסמה שגויה" }));
+          return;
+        }
+        var m = inv.models.find(function(x) { return x.id === data.id; });
+        if (!m) {
+          res.writeHead(404);
+          res.end(JSON.stringify({ error: "דגם לא נמצא" }));
+          return;
+        }
+        if (data.stock !== undefined) { m.stock = parseInt(data.stock); m.lastUpdate = new Date().toISOString(); }
+        if (data.minStock !== undefined) m.minStock = parseInt(data.minStock);
+        if (data.name !== undefined) m.name = data.name;
+        if (data.image !== undefined) m.image = data.image;
+        if (data.price !== undefined) m.price = data.price;
+        if (data.notes !== undefined) m.notes = data.notes;
+        persist(inv);
+        res.writeHead(200);
+        res.end(JSON.stringify({ ok: true, model: m }));
+      } catch (e) {
+        res.writeHead(400);
+        res.end(JSON.stringify({ error: "בקשה לא תקינה" }));
+      }
+    });
+    return;
+  }
+
+  // POST /add - הוסף דגם חדש (רק עם סיסמה)
+  if (req.method === "POST" && req.url === "/add") {
+    var body2 = "";
+    req.on("data", function(chunk) { body2 += chunk; });
+    req.on("end", function() {
+      try {
+        var data = JSON.parse(body2);
+        if (data.password !== APP_PASSWORD) {
+          res.writeHead(403);
+          res.end(JSON.stringify({ error: "סיסמה שגויה" }));
+          return;
+        }
+        var newModel = {
+          id: Date.now(),
+          name: data.name || "דגם חדש",
+          sku: data.sku || "",
+          category: data.category || "אחר",
+          color: data.color || "",
+          stock: parseInt(data.stock) || 0,
+          minStock: parseInt(data.minStock) || 500,
+          dailyAvg: 2,
+          image: data.image || "",
+          lastUpdate: new Date().toISOString()
+        };
+        inv.models.push(newModel);
+        persist(inv);
+        res.writeHead(200);
+        res.end(JSON.stringify({ ok: true, model: newModel }));
+      } catch (e) {
+        res.writeHead(400);
+        res.end(JSON.stringify({ error: "בקשה לא תקינה" }));
+      }
+    });
+    return;
+  }
+
+  // POST /delete - מחק דגם (רק עם סיסמה)
+  if (req.method === "POST" && req.url === "/delete") {
+    var body3 = "";
+    req.on("data", function(chunk) { body3 += chunk; });
+    req.on("end", function() {
+      try {
+        var data = JSON.parse(body3);
+        if (data.password !== APP_PASSWORD) {
+          res.writeHead(403);
+          res.end(JSON.stringify({ error: "סיסמה שגויה" }));
+          return;
+        }
+        inv.models = inv.models.filter(function(x) { return x.id !== data.id; });
+        persist(inv);
+        res.writeHead(200);
+        res.end(JSON.stringify({ ok: true }));
+      } catch (e) {
+        res.writeHead(400);
+        res.end(JSON.stringify({ error: "בקשה לא תקינה" }));
+      }
+    });
+    return;
+  }
+
+  res.writeHead(404);
+  res.end(JSON.stringify({ error: "not found" }));
+});
+
+var PORT = process.env.PORT || 3000;
+server.listen(PORT, function() {
+  console.log("API server on port " + PORT);
+});
 
 console.log("HavivNartikimBot פעיל!");
