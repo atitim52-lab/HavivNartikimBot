@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>חביב שיווק — קטלוג נרתיקים</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+<style>
+:root{
+  --bg:#0D1220;--card:#161D2E;--light:#1F2940;--gold:#D4A843;
+  --green:#34C77B;--red:#E8554D;--yellow:#E8A33D;--text:#EDF1F7;
+  --muted:#8A96AB;--border:#28334D;--accent:#5B8DEF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',Arial,sans-serif;min-height:100vh}
+input:focus,select:focus{border-color:var(--gold)!important;outline:none}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.header{background:var(--card);border-bottom:1px solid var(--border);padding:14px 16px;position:sticky;top:0;z-index:50}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.logo{font-size:19px;font-weight:800;color:var(--gold)}
+.sub{font-size:11px;color:var(--muted);margin-top:2px}
+.btn{border:none;border-radius:8px;padding:8px 16px;cursor:pointer;font-weight:700;font-size:13px;font-family:inherit}
+.btn-gold{background:var(--gold);color:var(--bg)}
+.btn-light{background:var(--light);color:var(--text);border:1px solid var(--border)}
+.btn-ghost{background:var(--light);color:var(--muted);border:1px solid var(--border)}
+.tabs{background:var(--light);border-bottom:1px solid var(--border)}
+.tabs-inner{max-width:1100px;margin:0 auto;display:flex}
+.tab{background:transparent;color:var(--muted);border:none;padding:11px 18px;cursor:pointer;font-size:13px;font-family:inherit}
+.tab.active{background:var(--gold);color:var(--bg);font-weight:700}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+.filters{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.search{flex:1;min-width:160px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 14px;color:var(--text);font-size:14px;font-family:inherit}
+.select{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;color:var(--text);font-size:13px;cursor:pointer;font-family:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;position:relative}
+.card-img{height:150px;background:var(--light);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.card-img .placeholder{font-size:44px;opacity:.3}
+.badge{position:absolute;top:8px;right:8px;color:#fff;border-radius:6px;padding:2px 9px;font-size:11px;font-weight:700}
+.edit-btn{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.6);border:none;color:#fff;border-radius:6px;padding:4px 8px;cursor:pointer;font-size:12px}
+.card-body{padding:12px 14px}
+.card-name{font-weight:700;font-size:14px;margin-bottom:2px}
+.card-sku{font-size:11px;color:var(--gold)}
+.card-footer{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:13px}
+.card-notes{font-size:11px;color:var(--yellow);margin-top:4px}
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;z-index:100;padding:16px}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;width:100%;max-width:420px;max-height:90vh;overflow-y:auto}
+.modal-title{font-weight:800;font-size:17px;color:var(--gold);margin-bottom:16px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:4px}
+.field input{width:100%;background:var(--light);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;font-family:inherit}
+.stat-row{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;flex:1;min-width:120px;text-align:center}
+.stat-label{font-size:11px;color:var(--muted);margin-bottom:4px}
+.stat-val{font-size:24px;font-weight:800}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:14px}
+.panel-title{font-weight:700;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px}
+.error-bar{background:#4A2E28;border:1px solid var(--red);border-radius:10px;padding:10px 16px;margin-bottom:14px;font-size:13px;color:#FFB3AD}
+.loading{text-align:center;padding:60px;color:var(--muted)}
+@media(max-width:500px){.grid{grid-template-columns:repeat(2,1fr)}.card-img{height:110px}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="logo">🕶️ חביב שיווק — קטלוג נרתיקים</div>
+      <div class="sub" id="subtitle">טוען...</div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-light" onclick="fetchInventory()">🔄</button>
+      <button class="btn btn-gold" id="loginBtn" onclick="toggleLogin()">👑 כניסת מנהל</button>
+    </div>
+  </div>
+</div>
+
+<div class="tabs" id="adminTabs" style="display:none">
+  <div class="tabs-inner">
+    <button class="tab active" id="tabCatalog" onclick="switchTab('catalog')">📦 קטלוג</button>
+    <button class="tab" id="tabDash" onclick="switchTab('dashboard')">📊 דשבורד מנהל</button>
+    <button class="tab" id="tabAdd" onclick="openAddModal()">➕ דגם חדש</button>
+  </div>
+</div>
+
+<div class="container">
+  <div id="errorBar" class="error-bar" style="display:none"></div>
+  <div id="loading" class="loading">טוען מלאי מהשרת...</div>
+
+  <div id="catalogView" style="display:none">
+    <div class="filters">
+      <input class="search" id="searchInput" placeholder="🔍 חיפוש דגם / מספר..." oninput="render()">
+      <select class="select" id="catSelect" onchange="render()">
+        <option value="all">כל הקטגוריות</option>
+      </select>
+    </div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px" id="countLabel"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <div id="dashView" style="display:none"></div>
+</div>
+
+<div class="modal-bg" id="loginModal" style="display:none" onclick="if(event.target===this)this.style.display='none'">
+  <div class="modal" style="max-width:340px;text-align:center">
+    <div style="font-size:36px;margin-bottom:8px">👑</div>
+    <div class="modal-title">כניסת מנהל</div>
+    <input type="password" id="pwInput" placeholder="סיסמה" style="width:100%;background:var(--light);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-size:16px;text-align:center;margin-bottom:8px;font-family:inherit" onkeydown="if(event.key==='Enter')doLogin()">
+    <div id="pwError" style="color:var(--red);font-size:12px;margin-bottom:8px;display:none">סיסמה שגויה</div>
+    <button class="btn btn-gold" style="width:100%;padding:13px;font-size:15px" onclick="doLogin()">כניסה</button>
+  </div>
+</div>
+
+<div class="modal-bg" id="editModal" style="display:none" onclick="if(event.target===this)closeEdit()">
+  <div class="modal">
+    <div class="modal-title" id="editTitle"></div>
+    <div style="text-align:center;margin-bottom:14px">
+      <div style="height:140px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:8px" id="editImgBox">
+        <span style="font-size:40px;opacity:.3">📷</span>
+      </div>
+      <input type="file" accept="image/*" id="fileInput" style="display:none" onchange="handleFile(event)">
+      <button class="btn btn-light" onclick="document.getElementById('fileInput').click()">📷 העלה תמונה</button>
+    </div>
+    <div class="field"><label>מלאי נוכחי</label><input type="number" id="editStock" style="font-size:16px;font-weight:700;text-align:center"></div>
+    <div class="field"><label>מינימום להזמנה</label><input type="number" id="editMin" style="text-align:center"></div>
+    <div class="field"><label>הערה פנימית (רק למנהל)</label><input type="text" id="editNotes" placeholder="למשל: הוזמן 5000 מסין 15.6"></div>
+    <div style="display:flex;gap:8px;margin-top:16px">
+      <button class="btn" style="flex:1;background:#7A2E28;color:#fff;padding:11px" onclick="doDelete()">🗑</button>
+      <button class="btn" style="flex:1;background:var(--border);color:var(--text);padding:11px" onclick="closeEdit()">ביטול</button>
+      <button class="btn btn-gold" style="flex:2;padding:11px;font-size:14px" onclick="doSave()">שמור</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="addModal" style="display:none" onclick="if(event.target===this)this.style.display='none'">
+  <div class="modal">
+    <div class="modal-title">➕ דגם חדש</div>
+    <div class="field"><label>שם הדגם (מספר + צבע)</label><input type="text" id="addName" placeholder="לדוג: 8121 שחור"></div>
+    <div class="field"><label>מספר דגם (SKU)</label><input type="text" id="addSku" placeholder="8121"></div>
+    <div class="field"><label>קטגוריה</label><input type="text" id="addCat" placeholder="קופסאות מתכת"></div>
+    <div class="field"><label>מלאי התחלתי</label><input type="number" id="addStock" placeholder="0" style="text-align:center"></div>
+    <div class="field"><label>מינימום להזמנה</label><input type="number" id="addMin" value="500" style="text-align:center"></div>
+    <div style="display:flex;gap:8px;margin-top:16px">
+      <button class="btn" style="flex:1;background:var(--border);color:var(--text);padding:11px" onclick="document.getElementById('addModal').style.display='none'">ביטול</button>
+      <button class="btn btn-gold" style="flex:2;padding:11px" onclick="doAdd()">הוסף דגם</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════ הגדרות ═══════════
+const API_URL = "https://havivnartikimbot-production.up.railway.app";
+const PASSWORD = "havivvip";
+const LEAD = 90;
+
+// ═══════════ State ═══════════
+let models = [];
+let isAdmin = localStorage.getItem("hv_admin") === "1";
+let currentTab = "catalog";
+let editingModel = null;
+let images = JSON.parse(localStorage.getItem("hv_images") || "{}");
+
+const CAT_ICON = {"נרתיקים רכים":"👜","קופסאות מתכת":"📦","קופסאות פלסטיק":"🗂","קופסאות מיוחדות":"✨","מטליות":"🧹","שקיות":"🛍","שרוכים":"🔗","שונות":"🔧","אחר":"📁"};
+const LEVELS = {
+  ok:{color:"var(--green)",label:"במלאי"},
+  warning:{color:"var(--yellow)",label:"מלאי נמוך"},
+  critical:{color:"var(--red)",label:"כמעט אזל"},
+  out:{color:"#666",label:"אזל"}
+};
+
+function stockLevel(m){
+  if(m.stock<=0)return"out";
+  if(m.stock<m.minStock)return"critical";
+  const d=m.dailyAvg>0?Math.floor(m.stock/m.dailyAvg):999;
+  if(d<=LEAD+30)return"warning";
+  return"ok";
+}
+
+function fmtTime(ts){
+  if(!ts)return"";
+  const d=new Date(ts);
+  return d.toLocaleDateString("he-IL",{day:"numeric",month:"numeric"})+" "+d.toLocaleTimeString("he-IL",{hour:"2-digit",minute:"2-digit"});
+}
+
+// ═══════════ API ═══════════
+async function fetchInventory(){
+  document.getElementById("loading").style.display="block";
+  document.getElementById("catalogView").style.display="none";
+  document.getElementById("errorBar").style.display="none";
+  try{
+    const res=await fetch(API_URL+"/inventory");
+    if(!res.ok)throw new Error();
+    const data=await res.json();
+    models=data.models||[];
+    localStorage.setItem("hv_cache",JSON.stringify(models));
+    document.getElementById("subtitle").textContent=models.length+" דגמים · עודכן "+new Date().toLocaleTimeString("he-IL",{hour:"2-digit",minute:"2-digit"})+(isAdmin?" · 👑 מצב מנהל":"");
+  }catch(e){
+    const cached=localStorage.getItem("hv_cache");
+    if(cached){
+      models=JSON.parse(cached);
+      showError("אין חיבור לשרת — מציג נתונים שמורים");
+    }else{
+      showError("לא ניתן להתחבר לשרת. ייתכן שהבוט 'ישן' — נסה שוב בעוד 30 שניות.");
+    }
+  }
+  document.getElementById("loading").style.display="none";
+  document.getElementById("catalogView").style.display="block";
+  buildCategorySelect();
+  render();
+}
+
+function showError(msg){
+  const bar=document.getElementById("errorBar");
+  bar.textContent="⚠️ "+msg;
+  bar.style.display="block";
+}
+
+// ═══════════ Render ═══════════
+function buildCategorySelect(){
+  const sel=document.getElementById("catSelect");
+  const current=sel.value;
+  const cats=[...new Set(models.map(m=>m.category).filter(Boolean))];
+  sel.innerHTML='<option value="all">כל הקטגוריות</option>';
+  cats.forEach(c=>{
+    const o=document.createElement("option");
+    o.value=c;o.textContent=(CAT_ICON[c]||"•")+" "+c;
+    sel.appendChild(o);
+  });
+  sel.value=current||"all";
+}
+
+function render(){
+  const q=document.getElementById("searchInput").value.toLowerCase();
+  const cat=document.getElementById("catSelect").value;
+  const filtered=models.filter(m=>{
+    if(q&&!(m.name.toLowerCase().includes(q)||(m.sku&&m.sku.toLowerCase().includes(q))))return false;
+    if(cat!=="all"&&m.category!==cat)return false;
+    return true;
+  });
+  document.getElementById("countLabel").textContent="מציג "+filtered.length+" דגמים";
+  const grid=document.getElementById("grid");
+  grid.innerHTML="";
+  filtered.forEach(m=>{
+    const lv=stockLevel(m);
+    const info=LEVELS[lv];
+    const img=images[m.id]||m.image||"";
+    const card=document.createElement("div");
+    card.className="card";
+    let imgHtml=img
+      ?'<img src="'+img+'" alt="">'
+      :'<div class="placeholder">'+(CAT_ICON[m.category]||"📦")+'</div>';
+    let footerHtml=isAdmin
+      ?'<div>מלאי: <strong style="color:'+info.color+'">'+m.stock+'</strong></div>'+(m.lastUpdate?'<div style="font-size:10px;color:var(--muted)">🕐 '+fmtTime(m.lastUpdate)+'</div>':'')
+      :'<div style="color:'+info.color+';font-weight:600">'+info.label+'</div>';
+    card.innerHTML=
+      '<div class="card-img">'+imgHtml+
+      '<div class="badge" style="background:'+info.color+'">'+info.label+'</div>'+
+      (isAdmin?'<button class="edit-btn" onclick="openEdit('+m.id+')">✏️</button>':'')+
+      '</div><div class="card-body">'+
+      '<div class="card-name">'+m.name+'</div>'+
+      '<div class="card-sku">#'+(m.sku||"")+' · '+(m.category||"")+'</div>'+
+      '<div class="card-footer">'+footerHtml+'</div>'+
+      (isAdmin&&m.notes?'<div class="card-notes">📝 '+m.notes+'</div>':'')+
+      '</div>';
+    grid.appendChild(card);
+  });
+  if(!filtered.length)grid.innerHTML='<div style="grid-column:1/-1;text-align:center;color:var(--muted);padding:60px">אין תוצאות</div>';
+}
+
+// ═══════════ Login ═══════════
+function toggleLogin(){
+  if(isAdmin){
+    isAdmin=false;
+    localStorage.setItem("hv_admin","0");
+    document.getElementById("loginBtn").textContent="👑 כניסת מנהל";
+    document.getElementById("adminTabs").style.display="none";
+    switchTab("catalog");
+    render();
+  }else{
+    document.getElementById("loginModal").style.display="flex";
+    setTimeout(()=>document.getElementById("pwInput").focus(),100);
+  }
+}
+
+function doLogin(){
+  if(document.getElementById("pwInput").value===PASSWORD){
+    isAdmin=true;
+    localStorage.setItem("hv_admin","1");
+    document.getElementById("loginModal").style.display="none";
+    document.getElementById("pwInput").value="";
+    document.getElementById("pwError").style.display="none";
+    document.getElementById("loginBtn").textContent="יציאה";
+    document.getElementById("adminTabs").style.display="block";
+    fetchInventory();
+  }else{
+    document.getElementById("pwError").style.display="block";
+  }
+}
+
+// ═══════════ Tabs ═══════════
+function switchTab(tab){
+  currentTab=tab;
+  document.getElementById("tabCatalog").className=tab==="catalog"?"tab active":"tab";
+  document.getElementById("tabDash").className=tab==="dashboard"?"tab active":"tab";
+  document.getElementById("catalogView").style.display=tab==="catalog"?"block":"none";
+  document.getElementById("dashView").style.display=tab==="dashboard"?"block":"none";
+  if(tab==="dashboard")renderDashboard();
+}
+
+function renderDashboard(){
+  const total=models.reduce((s,m)=>s+m.stock,0);
+  const critical=models.filter(m=>["critical","out"].includes(stockLevel(m)));
+  const warning=models.filter(m=>stockLevel(m)==="warning");
+  const cats={};
+  models.forEach(m=>{
+    const c=m.category||"אחר";
+    if(!cats[c])cats[c]={count:0,stock:0};
+    cats[c].count++;cats[c].stock+=m.stock;
+  });
+  let html='<div class="stat-row">'+
+    '<div class="stat"><div class="stat-label">סהכ יחידות</div><div class="stat-val" style="color:var(--gold)">'+total.toLocaleString()+'</div></div>'+
+    '<div class="stat"><div class="stat-label">דגמים</div><div class="stat-val" style="color:var(--accent)">'+models.length+'</div></div>'+
+    '<div class="stat"><div class="stat-label">דחוף להזמין</div><div class="stat-val" style="color:var(--red)">'+critical.length+'</div></div>'+
+    '<div class="stat"><div class="stat-label">מלאי נמוך</div><div class="stat-val" style="color:var(--yellow)">'+warning.length+'</div></div></div>';
+  if(critical.length){
+    html+='<div class="panel" style="border-color:var(--red)"><div class="panel-title" style="color:var(--red)">🚨 להזמין מסין עכשיו (90 יום הגעה!)</div>';
+    critical.slice(0,15).forEach(m=>{
+      html+='<div class="row"><span>'+m.name+'</span><span style="color:var(--red);font-weight:700">'+m.stock+' יח בלבד</span></div>';
+    });
+    if(critical.length>15)html+='<div style="color:var(--muted);font-size:12px;margin-top:6px">...ועוד '+(critical.length-15)+'</div>';
+    html+='</div>';
+  }
+  html+='<div class="panel"><div class="panel-title" style="color:var(--gold)">📊 מלאי לפי קטגוריה</div>';
+  Object.entries(cats).sort((a,b)=>b[1].stock-a[1].stock).forEach(e=>{
+    html+='<div class="row"><span>'+(CAT_ICON[e[0]]||"•")+' '+e[0]+' ('+e[1].count+' דגמים)</span><span style="font-weight:700;color:var(--gold)">'+e[1].stock.toLocaleString()+' יח</span></div>';
+  });
+  html+='</div>';
+  document.getElementById("dashView").innerHTML=html;
+}
+
+// ═══════════ Edit ═══════════
+function openEdit(id){
+  editingModel=models.find(m=>m.id===id);
+  if(!editingModel)return;
+  document.getElementById("editTitle").textContent="✏️ "+editingModel.name;
+  document.getElementById("editStock").value=editingModel.stock;
+  document.getElementById("editMin").value=editingModel.minStock;
+  document.getElementById("editNotes").value=editingModel.notes||"";
+  const box=document.getElementById("editImgBox");
+  const img=images[editingModel.id]||editingModel.image||"";
+  box.innerHTML=img?'<img src="'+img+'" style="width:100%;height:100%;object-fit:cover">':'<span style="font-size:40px;opacity:.3">📷</span>';
+  document.getElementById("editModal").style.display="flex";
+}
+
+function closeEdit(){
+  document.getElementById("editModal").style.display="none";
+  editingModel=null;
+}
+
+function handleFile(e){
+  const file=e.target.files[0];
+  if(!file||!editingModel)return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    const imgEl=new Image();
+    imgEl.onload=()=>{
+      const canvas=document.createElement("canvas");
+      const MAX=400;
+      let w=imgEl.width,h=imgEl.height;
+      if(w>h&&w>MAX){h=h*MAX/w;w=MAX}else if(h>MAX){w=w*MAX/h;h=MAX}
+      canvas.width=w;canvas.height=h;
+      canvas.getContext("2d").drawImage(imgEl,0,0,w,h);
+      const dataUrl=canvas.toDataURL("image/jpeg",0.7);
+      images[editingModel.id]=dataUrl;
+      localStorage.setItem("hv_images",JSON.stringify(images));
+      document.getElementById("editImgBox").innerHTML='<img src="'+dataUrl+'" style="width:100%;height:100%;object-fit:cover">';
+    };
+    imgEl.src=ev.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+
+async function doSave(){
+  if(!editingModel)return;
+  const stock=parseInt(document.getElementById("editStock").value);
+  const minStock=parseInt(document.getElementById("editMin").value);
+  const notes=document.getElementById("editNotes").value;
+  try{
+    const res=await fetch(API_URL+"/update",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({password:PASSWORD,id:editingModel.id,stock:stock,minStock:minStock,notes:notes})
+    });
+    if(res.ok){
+      Object.assign(editingModel,{stock,minStock,notes,lastUpdate:new Date().toISOString()});
+      closeEdit();
+      render();
+    }else{
+      alert("שגיאה בשמירה");
+    }
+  }catch(e){alert("אין חיבור לשרת")}
+}
+
+async function doDelete(){
+  if(!editingModel||!confirm("למחוק את "+editingModel.name+"?"))return;
+  try{
+    const res=await fetch(API_URL+"/delete",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({password:PASSWORD,id:editingModel.id})
+    });
+    if(res.ok){
+      models=models.filter(m=>m.id!==editingModel.id);
+      closeEdit();
+      render();
+    }
+  }catch(e){alert("אין חיבור לשרת")}
+}
+
+// ═══════════ Add ═══════════
+function openAddModal(){
+  document.getElementById("addModal").style.display="flex";
+}
+
+async function doAdd(){
+  const name=document.getElementById("addName").value.trim();
+  const sku=document.getElementById("addSku").value.trim();
+  const cat=document.getElementById("addCat").value.trim()||"אחר";
+  const stock=parseInt(document.getElementById("addStock").value)||0;
+  const min=parseInt(document.getElementById("addMin").value)||500;
+  if(!name)return alert("הכנס שם דגם");
+  try{
+    const res=await fetch(API_URL+"/add",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({password:PASSWORD,name:name,sku:sku,category:cat,stock:stock,minStock:min})
+    });
+    if(res.ok){
+      const data=await res.json();
+      models.push(data.model);
+      document.getElementById("addModal").style.display="none";
+      ["addName","addSku","addCat","addStock"].forEach(id=>document.getElementById(id).value="");
+      buildCategorySelect();
+      render();
+    }
+  }catch(e){alert("אין חיבור לשרת")}
+}
+
+// ═══════════ Init ═══════════
+if(isAdmin){
+  document.getElementById("loginBtn").textContent="יציאה";
+  document.getElementById("adminTabs").style.display="block";
+}
+fetchInventory();
+</script>
+</body>
+</html>
