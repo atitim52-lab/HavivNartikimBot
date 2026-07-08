@@ -9,8 +9,8 @@ const http = require("http");
 
 // אפשרות א: הגדר ב-Railway → Variables → BOT_TOKEN ו-CHAT_ID (מומלץ!)
 // אפשרות ב: החלף כאן ישירות את YOUR_BOT_TOKEN ו-YOUR_CHAT_ID
-const TOKEN = process.env.BOT_TOKEN || "YOUR_BOT_TOKEN";
-const ADMIN_CHAT_ID = process.env.CHAT_ID || "YOUR_CHAT_ID";
+const TOKEN = process.env.BOT_TOKEN || "8927766030:AAEhjDCM1KvWE_OgaLwJlkhXmmOKnx6CSkk";
+const ADMIN_CHAT_ID = process.env.CHAT_ID || "-5498872165";
 
 if (TOKEN === "YOUR_BOT_TOKEN") {
   console.error("שגיאה: חסר טוקן! הגדר BOT_TOKEN ב-Railway Variables או ערוך את הקובץ");
